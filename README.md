@@ -1,0 +1,2 @@
+# fridgegui
+first gui projiect
