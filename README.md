@@ -16,6 +16,12 @@
 ---
 ## C语言
 - [ ] [在linux上实现一个数据库](https://github.com/ShireHong/unix_c_db) 
+- [ ] [c语言小甜点](https://github.com/ShireHong/algorithm-note/tree/master/c)
 
 ## C++
 - [ ] [计算器的实现](https://github.com/ShireHong/algorithm-note/tree/master/c%2B%2B/calculator)
+
+## 算法
+- [ ] [动态规划](https://github.com/ShireHong/algorithm-note/tree/master/dp) 
+- [ ] [贪心算法](https://github.com/ShireHong/algorithm-note/tree/master/greedy) 
+
