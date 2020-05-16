@@ -15,6 +15,7 @@
 
 ---
 ## C语言
+自己实现的一关于数学和字符串处理的c语言练习，数据库是基于UNIX实现的，使用了hash算法，其实数据库最好的算法是B树，有时间会去重构：
 - [ ] [在linux上实现一个数据库](https://github.com/ShireHong/unix_c_db) 
 - [ ] [c语言小甜点](https://github.com/ShireHong/algorithm-note/tree/master/c)
 
