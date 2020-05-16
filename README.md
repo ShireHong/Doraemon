@@ -16,3 +16,6 @@
 ---
 ## C语言
 - [ ] [在linux上实现一个数据库](https://github.com/ShireHong/unix_c_db) 
+
+## C++
+- [ ] [计算器的实现](https://github.com/ShireHong/algorithm-note/tree/master/c%2B%2B/calculator)
