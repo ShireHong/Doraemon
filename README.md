@@ -6,4 +6,4 @@
 - [ ] 这个名字听起来很唬人，但是我也想继续使用它，作为一个激励，作为我前进的一个目标，向那些神一样的程序员致敬， Linus Benedict           Torvalds（Linux之父），Richard Matthew Stallman（GNU），Dennis MacAlistair Ritchie（c语言和unix），John D. Carmack II（3D 引擎），Bill Joy（BSD TCP/IP）
 
 ## 目录
-- [为什么？] （#为什么？）
+- [为什么？](#为什么？)
