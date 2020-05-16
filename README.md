@@ -5,5 +5,5 @@
 - [ ] 总受有很多的新的知识会添加进来，新的算法，linux相关的知识，c++相关的知识，图形图像相关的知识等等，我相信我的大脑内存受制于人类共同的极         限，幸运的是他支持片外扩展。所以，我把这里作为我的永久非易失性的存储空间。
 - [ ] 这个名字听起来很唬人，但是我也想继续使用它，作为一个激励，作为我前进的一个目标，向那些神一样的程序员致敬， Linus Benedict           Torvalds（Linux之父），Richard Matthew Stallman（GNU），Dennis MacAlistair Ritchie（c语言和unix），John D. Carmack II（3D 引擎），Bill Joy（BSD TCP/IP）
 
-#目录
-- [为什么？](#为什么)
+## 目录
+- [为什么？]
