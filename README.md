@@ -20,9 +20,12 @@
 - [ ] [c语言小甜点](https://github.com/ShireHong/algorithm-note/tree/master/c)
 
 ## C++
+使用栈的功能实现了一个计算器，主要考察栈的使用机理
 - [ ] [计算器的实现](https://github.com/ShireHong/algorithm-note/tree/master/c%2B%2B/calculator)
 
 ## 算法
+### 排序
+    - [ ] [归并排序](https://github.com/ShireHong/algorithm-note/tree/master/sort)
 - [ ] [动态规划](https://github.com/ShireHong/algorithm-note/tree/master/dp) 
 - [ ] [贪心算法](https://github.com/ShireHong/algorithm-note/tree/master/greedy) 
 
