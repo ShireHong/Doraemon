@@ -25,7 +25,7 @@
 
 ## 算法
 - [ ]  **排序**:
-    - [ ] [动态规划](https://github.com/ShireHong/algorithm-note/tree/master/dp) 
+    - [ ] [快速排序](https://github.com/ShireHong/algorithm-note/tree/master/sort) 
     - [ ] [归并排序](https://github.com/ShireHong/algorithm-note/tree/master/sort)
 - [ ] [动态规划](https://github.com/ShireHong/algorithm-note/tree/master/dp) 
 - [ ] [贪心算法](https://github.com/ShireHong/algorithm-note/tree/master/greedy) 
