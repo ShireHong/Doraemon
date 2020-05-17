@@ -24,7 +24,7 @@
 - [ ] [计算器的实现](https://github.com/ShireHong/algorithm-note/tree/master/c%2B%2B/calculator)
 
 ## 算法
-- [ ] ### **排序**:
+- [ ]  **排序**:
     - [ ] [动态规划](https://github.com/ShireHong/algorithm-note/tree/master/dp) 
     - [ ] [归并排序](https://github.com/ShireHong/algorithm-note/tree/master/sort)
 - [ ] [动态规划](https://github.com/ShireHong/algorithm-note/tree/master/dp) 
