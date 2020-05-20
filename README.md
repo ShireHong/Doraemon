@@ -35,6 +35,8 @@
 - [ ] **OPENGL**:
   用于渲染2D、3D矢量图形的跨语言、跨平台的应用程序编程接口（API）,通过一个很好的网站[LearnOpenGL CN](https://learnopengl-cn.github.io/)感受到了它的神奇魅力，并自己搭建了Mingw平台去练习。
     - [ ] [练习](https://github.com/ShireHong/OpenGL/tree/master/OpenGL)
+    - [ ] [BreakOut](https://github.com/ShireHong/OpenGL/tree/master/my_game/breakout) 基于OpenGL完成的一个游戏，主要是基于c++搭建一个框                     架，包含渲染，物理碰撞，声音（Mingw的声音库有问题，在研究），游戏逻辑。实现了一个2D引擎，基于这个引擎可以制作所有的2D游                     戏。
+    - [ ] [AirCraft](https://github.com/ShireHong/OpenGL/tree/master/my_game/aircraft)根据上面的引擎开发的游戏，主要是练习多目标物理碰                       撞，使用C++的STL容器，但是算法有待改进。
  
  ## 数据结构
  - [ ] [环形队列](https://github.com/ShireHong/algorithm-note/tree/master/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%8E%AF%E5%BD%A2%E9%98%9F%E5%88%97)
