@@ -12,12 +12,14 @@
 - [算法](#算法)
 - [linux](#linux)
 - [图形图像](#图形图像)
+- [数据结构](#数据结构)
 
 ---
 ## C语言
 自己实现的一关于数学和字符串处理的c语言练习，数据库是基于UNIX实现的，使用了hash算法，其实数据库最好的算法是B树，有时间会去重构：
 - [ ] [在linux上实现一个数据库](https://github.com/ShireHong/unix_c_db) 
 - [ ] [c语言小甜点](https://github.com/ShireHong/algorithm-note/tree/master/c)
+       一些数学上的小练习，考察c语言基础能力
 
 ## C++
 使用栈的功能实现了一个计算器，主要考察栈的使用机理
@@ -34,6 +36,11 @@
 - [ ] **OPENGL**:
   用于渲染2D、3D矢量图形的跨语言、跨平台的应用程序编程接口（API）,通过一个很好的网站[LearnOpenGL CN](https://learnopengl-cn.github.io/)感受到了它的神奇魅力，并自己搭建了Mingw平台去练习。
     - [ ] [练习](https://github.com/ShireHong/OpenGL/tree/master/OpenGL)
+    - [ ] [BreakOut](https://github.com/ShireHong/OpenGL/tree/master/my_game/breakout) 基于OpenGL完成的一个游戏，主要是基于c++搭建一个框                     架，包含渲染，物理碰撞，声音（Mingw的声音库有问题，在研究），游戏逻辑。实现了一个2D引擎，基于这个引擎可以制作所有的2D游                     戏。
+    - [ ] [AirCraft](https://github.com/ShireHong/OpenGL/tree/master/my_game/aircraft)根据上面的引擎开发的游戏，主要是练习多目标物理碰                       撞，使用C++的STL容器，但是算法有待改进。
+ 
+ ## 数据结构
+ - [ ] [环形队列](https://github.com/ShireHong/algorithm-note/tree/master/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%8E%AF%E5%BD%A2%E9%98%9F%E5%88%97)
 
 
 
