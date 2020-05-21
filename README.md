@@ -45,7 +45,7 @@
 
 
 ## 学习网站
-- [ ] [可以学习C/C++](https://ezlippi.com/blog/2014/12/c-open-project.html),这个BLOG有很多开源的C/C++的资源，内容丰富，囊括很多方面的内容
+- [ ] [C/C++资源](https://ezlippi.com/blog/2014/12/c-open-project.html),这个BLOG有很多开源的C/C++的资源，内容丰富，囊括很多方面的内容
 
 
 
