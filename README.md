@@ -44,6 +44,9 @@
  - [ ] [环形队列](https://github.com/ShireHong/algorithm-note/tree/master/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%8E%AF%E5%BD%A2%E9%98%9F%E5%88%97)
 
 
+## 学习网站
+- [ ] [可以学习C/C++](https://ezlippi.com/blog/2014/12/c-open-project.html),这个BLOG有很多开源的C/C++的资源，内容丰富，囊括很多方面的内容
+
 
 
 
