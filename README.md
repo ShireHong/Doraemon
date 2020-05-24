@@ -21,6 +21,8 @@
 - [ ] [在linux上实现一个数据库](https://github.com/ShireHong/unix_c_db) 
 - [ ] [c语言小甜点](https://github.com/ShireHong/algorithm-note/tree/master/c)
        一些数学上的小练习，考察c语言基础能力
+- [ ] [字符串问题汇总]
+    - [双指针逆序](https://github.com/ShireHong/algorithm-note/blob/master/string/str_reverse.c) 
 
 ## C++
 使用栈的功能实现了一个计算器，主要考察栈的使用机理
