@@ -21,7 +21,7 @@
 - [ ] [在linux上实现一个数据库](https://github.com/ShireHong/unix_c_db) 
 - [ ] [c语言小甜点](https://github.com/ShireHong/algorithm-note/tree/master/c)
        一些数学上的小练习，考察c语言基础能力
-- [ ] 字符串问题汇总
+- [ ] **字符串问题汇总**
     - [ ] [双指针逆序](https://github.com/ShireHong/algorithm-note/blob/master/string/str_reverse.c)
 
 ## C++
