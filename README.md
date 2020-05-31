@@ -46,6 +46,11 @@
  >> 链表
  >>> 单链表
  >>>> - [ ] [约瑟夫环]
+ 
+ >> 树
+ >>> 二叉树
+ >>>> - [ ] [树的层遍历](https://github.com/ShireHong/algorithm-note/blob/master/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/tree_traversal.c)
+
  - [ ] [环形队列](https://github.com/ShireHong/algorithm-note/tree/master/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%8E%AF%E5%BD%A2%E9%98%9F%E5%88%97)
 
 
