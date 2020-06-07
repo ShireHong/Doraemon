@@ -2,8 +2,7 @@
 #include<stdlib.h>
 
 /*
-单链表实现约瑟夫环，要实现一个单循环链表，实现方式很多，最重要的是把最后一个节点指向首节点就ok
-这样在判断是否有最后结果的时候就有下一个节点是否等于自己
+合并两个有序单链表，新的链表仍然是一个有序单链表，这个解法，网上有些解法有错误，我尝试了种新的解法
 */
 
 typedef struct _node
@@ -46,6 +45,8 @@ void print_list(listnode_t* node)
 	printf("\n");
 }
 
+/*这个解法理解非常简单，*/
+
 listnode_t * merge_sort_list(listnode_t *node1, listnode_t *node2)
 {
 	listnode_t *head1 = node1;
@@ -55,11 +56,13 @@ listnode_t * merge_sort_list(listnode_t *node1, listnode_t *node2)
 
 	while(head1 && head2)
 	{		
+		/*将小的节点插入到新的链表中，因为是有序的，所以直接插入*/
 		if(head1->data < head2->data)
 		{
 			insert_node(&new,head1->data);
 			head1 = head1->next;
 		}
+		/*这个地方需要判断上一次的head1有没有到链表的尾巴节点，如果是尾巴节点，说明可以循环*/
 		if(head1)
 		{
 			if(head1->data > head2->data)
@@ -69,6 +72,7 @@ listnode_t * merge_sort_list(listnode_t *node1, listnode_t *node2)
 			}	
 		}		
 	}
+	/*如果有一个链表已经插入结束，就把剩下的单链表的所有节点插入到新链表中*/
 	while(head1)
 	{
 		insert_node(&new,head1->data);
