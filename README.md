@@ -47,8 +47,8 @@
  >>> 单链表
  >>>> - [ ] [约瑟夫环](https://github.com/ShireHong/algorithm-note/blob/master/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/Josephus_list.c)
  >>>> - [ ] [反转单链表](https://github.com/ShireHong/algorithm-note/blob/master/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/reverse_list.c)
-  >>>> - [ ] [合并有序链表](https://github.com/ShireHong/algorithm-note/blob/master/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/merge_sort_list.c)
- 
+ >>>> - [ ] [合并有序链表](https://github.com/ShireHong/algorithm-note/blob/master/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/merge_sort_list.c)
+ >>>> - [ ] [寻找中间节点](https://github.com/ShireHong/algorithm-note/blob/master/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/find_mid_node_list.c)
  
  >> 树
  >>> 二叉树
