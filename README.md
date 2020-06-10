@@ -50,7 +50,8 @@
  >>>> - [ ] [合并有序链表](https://github.com/ShireHong/algorithm-note/blob/master/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/merge_sort_list.c)
  >>>> - [ ] [寻找中间节点](https://github.com/ShireHong/algorithm-note/blob/master/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/find_mid_node_list.c)
  >>>> - [ ] [倒数k个节点](https://github.com/ShireHong/algorithm-note/blob/master/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/find_bottom_k_list.c)
- 
+ >>>> - [ ] [链表中环的长度](https://github.com/ShireHong/algorithm-note/blob/master/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/circle_length_list.c)
+
  >> 树
  >>> 二叉树
  >>>> - [ ] [树的层遍历](https://github.com/ShireHong/algorithm-note/blob/master/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/tree_traversal.c)
