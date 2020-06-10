@@ -35,6 +35,8 @@
 - [ ] [动态规划](https://github.com/ShireHong/algorithm-note/tree/master/dp) 
 - [ ] [贪心算法](https://github.com/ShireHong/algorithm-note/tree/master/greedy) 
 
+## Linux
+
 ## 图形图像
 - [ ] **OPENGL**:
   用于渲染2D、3D矢量图形的跨语言、跨平台的应用程序编程接口（API）,通过一个很好的网站[LearnOpenGL CN](https://learnopengl-cn.github.io/)感受到了它的神奇魅力，并自己搭建了Mingw平台去练习。
