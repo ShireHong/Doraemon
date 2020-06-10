@@ -36,7 +36,7 @@
 - [ ] [贪心算法](https://github.com/ShireHong/algorithm-note/tree/master/greedy) 
 
 ## Linux
-> Linux有几大部分组成，进程管理、内存管理、文件系统以及网络管理
+ > Linux有几大部分组成，进程管理、内存管理、文件系统以及网络管理
 
 ## 图形图像
 - [ ] **OPENGL**:
