@@ -38,7 +38,7 @@
 ## Linux
  > Linux有几大部分组成，进程管理、内存管理、文件系统以及网络管理
 - [ ] **内存管理**
- - [ ] [Linux内存介绍](https://github.com/ShireHong/algorithm-note/blob/master/linux/mem/linux_mem.md) 这是我在微信上看到的关于linux内存的介绍，相当完善，所以把他整理放在这里
+  - [ ] [Linux内存介绍](https://github.com/ShireHong/algorithm-note/blob/master/linux/mem/linux_mem.md) 这是我在微信上看到的关于linux内存的介绍，相当完善，所以把他整理放在这里
 
 ## 图形图像
 - [ ] **OPENGL**:
