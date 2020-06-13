@@ -3,7 +3,7 @@
 - 1) 内存又称主存，是 CPU 能直接寻址的存储空间，由半导体器件制成
 - 2) 内存的特点是存取速率快
 
-<img src="https://github.com/ShireHong/algorithm-note/blob/master/linux/mem/hardware_componet.jpg" width="382" height="160" 
+<img src="https://github.com/ShireHong/algorithm-note/blob/master/linux/mem/jpg/hardware_componet.jpg" width="382" height="160" 
     alt="图片加载失败时，显示这段字"/>
     
 #### 2、内存的作用
@@ -22,7 +22,7 @@
 
 ### 二、Linux内存地址空间
 #### 1、linux 内存地址空间 Linux 内存管理
-<img src="https://github.com/ShireHong/algorithm-note/blob/master/linux/mem/mem_management.jpg" width="856" height="568" 
+<img src="https://github.com/ShireHong/algorithm-note/blob/master/linux/mem/jpg/mem_management.jpg" width="856" height="568" 
     alt="图片加载失败时，显示这段字"/>
 
 #### 2、内存地址--用户态和内核态
@@ -31,7 +31,8 @@
 - 用户态切换到内核态的 3 种方式：系统调用、异常、外设中断
 - 区别：每个进程都有完全属于自己的，独立的，不被干扰的内存空间；用户态的程序就不能随意操作内核地址空间，具有一定的安全保护作用；内核态线程共享内核地址空间；
 
-<user_kernel_mem.jpg>
+<img src="https://github.com/ShireHong/algorithm-note/blob/master/linux/mem/jpg/user_kernel_mem.jpg"  
+    alt="图片加载失败时，显示这段字"/>
 
 > 注：Intel的CPU将特权级别分为4个级别：RING0、RING1、RING2、RING3。Windows只使用其中的两个级别RING0和RING3，RING0只给操作系统用，RING3谁都能用。如果普通应用程序企图执行RING0指令，则Windows会显示“非法指令”错误信息。
 
@@ -40,7 +41,8 @@
 - 分段机制把一个逻辑地址转换为线性地址
 - 分页机制把一个线性地址转换为物理地址
 
-<virtual_to_physical_addr>
+<img src="https://github.com/ShireHong/algorithm-note/blob/master/linux/mem/jpg/virtual_to_physical_addr.jpg"  
+    alt="图片加载失败时，显示这段字"/>
 
 #### 4、内存地址——分段机制
 - 1) 段选择符
@@ -49,19 +51,22 @@
   - 段的界限(Limit)：在虚拟地址空间中，段内可以使用的最大偏移量
 - 2) 分段实现
   - 逻辑地址的段寄存器中的值提供段描述符，然后从段描述符中得到段基址和段界限，然后加上逻辑地址的偏移量，就得到了线性地址
-
-  <logical_to_liner_addr>
+  
+<img src="https://github.com/ShireHong/algorithm-note/blob/master/linux/mem/jpg/logical_to_liner_addr.jpg"  
+    alt="图片加载失败时，显示这段字"/>
 
 #### 5、内存地址——分页机制（32 位）
 - 分页机制是在分段机制之后进行的，它进一步将线性地址转换为物理地址
 - 10 位页目录，10 位页表项， 12 位页偏移地址
 - 单页的大小为 4KB
 
-<page_addr>
+<img src="https://github.com/ShireHong/algorithm-note/blob/master/linux/mem/jpg/page_addr.jpg"  
+    alt="图片加载失败时，显示这段字"/>
 
 #### 6、用户态地址空间
 
-<user_addr_mem>
+<img src="https://github.com/ShireHong/algorithm-note/blob/master/linux/mem/jpg/user_addr_mem.jpg"  
+    alt="图片加载失败时，显示这段字"/>
 
 - TEXT：代码段可执行代码、字符串字面值、只读变量
 - DATA：数据段，映射程序中已经初始化的全局变量
@@ -74,7 +79,8 @@
 
 #### 7、内核态地址空间
 
-<kernel_addr_mem>
+<img src="https://github.com/ShireHong/algorithm-note/blob/master/linux/mem/jpg/kernel_addr_mem.jpg"  
+    alt="图片加载失败时，显示这段字"/>
 
 - 直接映射区：线性空间中从 3G 开始最大 896M 的区间，为直接内存映射区,也就是说0xC0000000~high_memory之间空间大小与系统的物理内存空间大小是相同的（当然在配置了CONFIG_DISCONTIGMEMD选项的非连续内存系统中，内核逻辑地址空间和物理内存空间一样可能存在内存孔洞）
 - 动态内存映射区：该区域由内核函数 vmalloc 来分配
@@ -86,7 +92,8 @@
 - 用户进程通常情况只能访问用户空间的虚拟地址，不能访问内核空间虚拟地址
 - 核空间是由内核负责映射，不会跟着进程变化；内核空间地址有自己对应的页表，用户进程各自有不同额页表
 
-<process_mem>
+<img src="https://github.com/ShireHong/algorithm-note/blob/master/linux/mem/jpg/process_mem.jpg"  
+    alt="图片加载失败时，显示这段字"/>
 
 ### 三、 Linux 内存分配算法
 
@@ -114,7 +121,9 @@
   - 把所有的空闲页分组为11个块链表，每个块链表分别包含大小为1，2，4，8，16，32，64，128，256，512 和 1024 个连续页框的页块。最大可以申请 1024 个连续页，对应 4MB 大小的连续内存
 
 > 比如我需要申请4个页框，但是长度为4个连续页框块链表没有空闲的页框块，伙伴系统会从连续8个页框块的链表获取一个，并将其拆分为两个连续4个页框块，取其中一个，另外一个放入连续4个页框块的空闲链表中。释放的时候会检查，释放的这几个页框前后的页框是否空闲，能否组成下一级长度的块。
-  <free_page>
+
+<img src="https://github.com/ShireHong/algorithm-note/blob/master/linux/mem/jpg/free_page.jpg"  
+    alt="图片加载失败时，显示这段字"/>
 
 ### 3、伙伴系统算法——申请和回收
 - 1) 申请算法
@@ -125,11 +134,13 @@
 - 2) 回收算法
 - 释放 2^i 个页块存储空间，查找 2^i 个页块对应的块链表，是否有与其物理地址是连续的页块，如果没有，则无需合并
 
-<friend_example>
+<img src="https://github.com/ShireHong/algorithm-note/blob/master/linux/mem/jpg/friend_example.jpg"  
+    alt="图片加载失败时，显示这段字"/>
 
 - 如果有，则合并成 2^（i 1）的页块，以此类推，继续查找下一级块链接，直到不能合并为止
 
-<merge_block>
+<img src="https://github.com/ShireHong/algorithm-note/blob/master/linux/mem/jpg/merge_block.jpg"  
+    alt="图片加载失败时，显示这段字"/>
 
 - 3) 条件
 - 两个块具有相同的大小
@@ -172,8 +183,9 @@
 - slabs_empty 列表中的 slab 是进行回收（reaping）的主要备选对象
 - slab 还支持通用对象的初始化，从而避免了为同一目而对一个对象重复进行初始化
 
-<slab>
-
+<img src="https://github.com/ShireHong/algorithm-note/blob/master/linux/mem/jpg/slab.jpg"  
+    alt="图片加载失败时，显示这段字"/>
+    
 #### 8、slab 高速缓存
 - 1) 普通高速缓存
   - slab 分配器所提供的小块连续内存的分配是通过通用高速缓存实现的
@@ -196,7 +208,8 @@ mempool_alloc 分配函数获得该对象
 mempool_free 释放一个对象
 mempool_destroy 销毁内存池
 ```
-<mem_pool>
+<img src="https://github.com/ShireHong/algorithm-note/blob/master/linux/mem/jpg/mem_pool.jpg"  
+    alt="图片加载失败时，显示这段字"/>
 
 #### 10、用户态内存池
 - C++
@@ -266,8 +279,9 @@ public:
   - HRQ：DMA 控制器向 CPU 发出的信号，要求接管总线的请求信号。
   - HLDA：CPU 向 DMA 控制器发出的信号，允许接管总线的应答信号：
 
-  <DMA>
-
+<img src="https://github.com/ShireHong/algorithm-note/blob/master/linux/mem/jpg/DMA.jpg"  
+    alt="图片加载失败时，显示这段字"/>
+    
 ### 四、 内存使用场景
  > out of memory 的时代过去了吗？no，内存再充足也不可任性使用。
 #### 1、内存的使用场景
@@ -291,36 +305,41 @@ public:
 
 #### 4、malloc申请内存
  - 调用 malloc 函数时，它沿 free_chuck_list 连接表寻找一个大到足以满足用户请求所需要的内存块
-
-<malloc>
+ 
+<img src="https://github.com/ShireHong/algorithm-note/blob/master/linux/mem/jpg/malloc.jpg"  
+    alt="图片加载失败时，显示这段字"/>
 
  - free_chuck_list 连接表的主要工作是维护一个空闲的堆空间缓冲区链表
  - 如果空间缓冲区链表没有找到对应的节点，需要通过系统调用 sys_brk 延伸进程的栈空间
-
- <sys_brk>
-
+ 
+<img src="https://github.com/ShireHong/algorithm-note/blob/master/linux/mem/jpg/sys_brk.jpg"  
+    alt="图片加载失败时，显示这段字"/>
+    
 #### 5、缺页异常
 - 通过 get_free_pages 申请一个或多个物理页面
 - 换算 addr 在进程 pdg 映射中所在的 pte 地址
 - 将 addr 对应的 pte 设置为物理页面的首地址
 - 系统调用：Brk—申请内存小于等于 128kb，do_map—申请内存大于 128kb
 
-<page_shortage>
-
+<img src="https://github.com/ShireHong/algorithm-note/blob/master/linux/mem/jpg/page_shortage.jpg"  
+    alt="图片加载失败时，显示这段字"/>
+    
 #### 6、用户进程访问内存分析
 - 用户态进程独占虚拟地址空间，两个进程的虚拟地址可相同
 - 在访问用户态虚拟地址空间时，如果没有映射物理地址，通过系统调用发出缺页异常
 - 缺页异常陷入内核，分配物理地址空间，与用户态虚拟地址建立映射
 
-<usr_process_mem>
+<img src="https://github.com/ShireHong/algorithm-note/blob/master/linux/mem/jpg/usr_process_mem.jpg"  
+    alt="图片加载失败时，显示这段字"/>
 
 #### 7、共享内存
 - 1) 原理
   - 它允许多个不相关的进程去访问同一部分逻辑内存
   - 两个运行中的进程之间传输数据，共享内存将是一种效率极高的解决方案
   - 两个运行中的进程共享数据，是进程间通信的高效方法，可有效减少数据拷贝的次数
-
-  <share_mem>
+  
+<img src="https://github.com/ShireHong/algorithm-note/blob/master/linux/mem/jpg/share_mem.jpg"  
+    alt="图片加载失败时，显示这段字"/>
 
 - 2) shm 接口
   - shmget 创建共享内存
