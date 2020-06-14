@@ -251,10 +251,10 @@ shell位每个作业创建一个独立的进程组。进程组ID是取自job中�
 
 Ctrl + C发送SIGINT信号到前台进程组中的每一个进程，终止前台作业。
 
+<img src="https://github.com/ShireHong/algorithm-note/blob/master/linux/process/pic/process_group.jpg"  
+    alt="图片加载失败时，显示这段字"/>
 
-<process_group>
-
-- 用KILL函数发送信号。
+- 用<font color=red>KILL</font>函数发送信号。
 ```
 #include <signal.h>
 // 输入参数pid：
@@ -428,8 +428,8 @@ int dosomething() {
 ```
 
 #### 操作进程工具
-STRACE：打印一个正在运行的程序和它的子程序调用的每个系统调用的轨迹。
-PS：列出当前系统中的进程（包括僵尸进程）。
-TOP：打印关于当前进程资源使用的信息。
-PMAP：显示进程的存储器映射。
-/proc：一个虚拟文件系统，以ASCII输出大量内核数据结构的内容。如cat /proc/loadavg，观察Linux系统上的当前的平均负载。
+- STRACE：打印一个正在运行的程序和它的子程序调用的每个系统调用的轨迹。
+- PS：列出当前系统中的进程（包括僵尸进程）。
+- TOP：打印关于当前进程资源使用的信息。
+- PMAP：显示进程的存储器映射。
+- /proc：一个虚拟文件系统，以ASCII输出大量内核数据结构的内容。如cat /proc/loadavg，观察Linux系统上的当前的平均负载。
