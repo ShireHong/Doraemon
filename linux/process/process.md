@@ -1,6 +1,6 @@
 ### What is Process？
-
-<system_structure>
+<img src="https://github.com/ShireHong/algorithm-note/blob/master/linux/process/pic/system_structure.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 - 进程（Process）
 经典定义是一个执行中的程序的实例，操作系统对一个正在运行的程序的一种抽象。并发运行，指的是一个进程的指令和另一个进程的指令交错执行。操作系统实现这种交错执行的机制称为上下文切换。
@@ -40,7 +40,8 @@ ECF发生在硬件层，操作系统层，应用层。控制转移（control tra
 
 我们常见的段故障（Segmentation fault），是一般保护故障（异常13），通常是因为一个程序引用了一个未定义的虚拟存储器区域，或者因为程序试图写一个只读的文本段。
 
-<system_calls>
+<img src="https://github.com/ShireHong/algorithm-note/blob/master/linux/process/pic/system_calls.jpg"  
+    alt="图片加载失败时，显示这段字"/>
 
 #### Processes
 
@@ -63,8 +64,8 @@ ECF发生在硬件层，操作系统层，应用层。控制转移（control tra
 - 私有地址空间（Private Address Space）
 一般，进程间地址空间读写保护。进程地址空间32位进程，代码段从0x08048000开始，64位进程从0x00400000开始：
 
-
-<process_addr_space>
+<img src="https://github.com/ShireHong/algorithm-note/blob/master/linux/process/pic/process_addr_space.jpg"  
+    alt="图片加载失败时，显示这段字"/>
 
 - 用户模式和内核模式（User and Kernel Modes）
 通过控制寄存器中的模式位（mode bit）描述进程当前享有的特权。
@@ -210,8 +211,8 @@ int main(int argc, char **argv, char **envp);
 int main(int argc, char *argv[], char *envp[]);
 ```
 #### Signal
-
-<signal>
+<img src="https://github.com/ShireHong/algorithm-note/blob/master/linux/process/pic/signal.jpg"  
+    alt="图片加载失败时，显示这段字"/>
 
 信号传递到目的进程包括两个步骤：1）发送；2）接收。
 
@@ -306,7 +307,7 @@ else：
    选择某个最小信号k，强制p接收信号k
    goto wtf
 ```
-每个信号类型预定义的默认行为[signal]：
+每个信号类型预定义的默认行为[signal](#signal)：
 - 进程终止
 - 进程终止并转存储器（dump core）
 - 进程停止直到被SIGCONT信号重启
