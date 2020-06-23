@@ -45,7 +45,10 @@
  > Linux有几大部分组成，进程管理、内存管理、文件系统以及网络管理
 - [ ] **内存管理**
   - [ ] [Linux内存介绍](https://github.com/ShireHong/algorithm-note/blob/master/linux/mem/linux_mem.md) 这是我在微信上看到的关于linux内存的介绍，相当完善，所以把他整理放在这里
+- [ ] **进程管理**
   - [ ] [进程](https://github.com/ShireHong/Doraemon/edit/master/linux/process/process.md) (这是腾讯技术的文章)编辑这篇文章的时候发现不能设置字体颜色。
+- [ ] **网络管理**
+  - [ ] [HTTP](https://github.com/ShireHong/Doraemon/blob/master/linux/network/http.md) 。
 
 ## 图形图像
 - [ ] **OPENGL**:
