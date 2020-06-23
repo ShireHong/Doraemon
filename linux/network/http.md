@@ -20,7 +20,9 @@
 ---
 
 ### HTTP应用场景
-<http_application_sence.png>
+
+<img src="https://github.com/ShireHong/Doraemon/blob/master/linux/network/pic/http_application_sence.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 ### 什么是HTTP
 HTTP(hypertext transport protocol)翻译过来为**"超文本传输协议"**，文本可以理解为简单的字符文字组合，也可以理解为更为复杂的音频或者图像等。那么将这个词语拆分为三个部分。
@@ -56,7 +58,8 @@ HTTP/1.0
 
 - 4.传输完成，断开连接。
 
-<HTTP_0.9.png>
+<img src="https://github.com/ShireHong/Doraemon/blob/master/linux/network/pic/HTTP_0_9.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 - [ ]  ***HTTP1.0***
 
@@ -89,7 +92,8 @@ Content-Type: text/html
 
 **HTTP1.0通信过程**
 
-<HTTP_1.0.png>
+<img src="https://github.com/ShireHong/Doraemon/blob/master/linux/network/pic/HTTP_1_0.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 - [ ] ***HTTP1.1***
 
@@ -101,7 +105,8 @@ Content-Type: text/html
 
 随着文件越来越大，图片等信息越来越复杂，如果每一次上传下载文件都需要建立连接断开连接的过程将增加大量的开销。为此，提出了**持久连接**，也就是一次TCP连接可以具有多个HTTP请求。当然持久连接是可选择的，如果考虑关闭，只需要使用Connecttion:close关闭即可。长连接如下图所示
 
-<HTTP_1_1.png>
+<img src="https://github.com/ShireHong/Doraemon/blob/master/linux/network/pic/HTTP_1_1.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 - 强制要求Host头
 
@@ -140,7 +145,8 @@ HTTP/2看似很完美了吧，但是Google轮子哥可不服，其他人在研�
 ### HTTP报文详解
 > 客户端与服务端进行交互的信息为报文。客户端为请求报文，服务端为响应报文。我们先用wireshark抓一个博客看看
 
-<message.png>
+<img src="https://github.com/ShireHong/Doraemon/blob/master/linux/network/pic/message.png"  
+    alt="图片加载失败时，显示这段字"/>
 ```
 GET /article/12 HTTP/1.1
 Host: www.xxx.cn
@@ -165,7 +171,8 @@ Content-Encoding: gzip
 
 请求报文
 
-<ask_msg.png>
+<img src="https://github.com/ShireHong/Doraemon/blob/master/linux/network/pic/ask_msg.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 
 请求报文通常由三部分组成：
@@ -193,11 +200,13 @@ Content-Encoding: gzip
 
 网络层的IP主要目的是解决**路由和寻址**。现在的IP地址按照"."分割，总共2的32次方大约42亿。对于计算机来说比较方便，但是对于人类来说还是不容易记忆，此时出现DNS了，他把IP地址**映射**为我们平时常见的"redis.org"，按照"."分割域名，从左到右级别越高，最右边为"顶级域名"。如下图所示
 
-<dns_class.png>
+<img src="https://github.com/ShireHong/Doraemon/blob/master/linux/network/pic/dns_class.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 好了，现在TCP提供可靠(数据不丢失)且字节流(数据完整性)，而且也有方便我们记忆的域名，但是互联网资源千万种，也不知道访问什么(图片，文字，视频一大堆)，这个时候URI(统一资源标识符)出现了，那长啥样？
 
-<URI_format.png>
+<img src="https://github.com/ShireHong/Doraemon/blob/master/linux/network/pic/URI_format.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 - 协议名:HTTP协议，另外还有ftp等协议。告知访问资源时使用什么协议。
 
@@ -225,7 +234,8 @@ file:///E:/Demo/index/
 
 响应报文
 
-<response_msg.png>
+<img src="https://github.com/ShireHong/Doraemon/blob/master/linux/network/pic/response_msg.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 - 状态行----服务器响应的状态
 
@@ -341,7 +351,8 @@ ok，在报文中使用"Transer-Encoding:chunked"表示，代表body部分数据
 
 3.使用长度0表示结束，"0\r\n\r\n"
 
-<chunked_fragment.png>
+<img src="https://github.com/ShireHong/Doraemon/blob/master/linux/network/pic/chunked_fragment.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 分块解决了咋们一部分问题，但是有的时候我们想截断发送怎么办呢。在HTTP中提供了使用字段“Accept - Ranges: bytes”，明确告知客户端：“我是支持范围请求的”。那么Range范围是怎样的呢，Range从0开始计算，比如Range:0-5则读取前6个字节，服务器收到了这个请求，将如何回应呢?
 
@@ -360,11 +371,13 @@ ok，在报文中使用"Transer-Encoding:chunked"表示，代表body部分数据
 
 现在我们通过MIME-TYPE和Encoding-type可以知道body部分的类型，下一步将是对内容进行协商。HTTP中，请求体中使用Accept告诉服务端需要什么类型数据(我能处理哪些类型数据)，响应头中使用Content表明发送了什么类型数据，具体如下图所示
 
-<content.png>
+<img src="https://github.com/ShireHong/Doraemon/blob/master/linux/network/pic/content.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 好了，为了各个国家民族顺利友好的沟通和明确的区分。HTTP请求头中使用"type-subtype"，注意此时分隔符是"-"。比如en-GB表示英式英语，zh-CN表示常用的汉语，那对于客户端而言，它通过Accept-Language来标记自己可以理解的自然语言，对应的服务端使用Content-Language表明实体数据使用的语言类型，如下图所示。
 
-<charset_code.png>
+<img src="https://github.com/ShireHong/Doraemon/blob/master/linux/network/pic/charset_code.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 
 
@@ -372,7 +385,8 @@ ok，在报文中使用"Transer-Encoding:chunked"表示，代表body部分数据
 
 > HTTP是无状态、无记忆的，Cookie机制的出现让其有记忆功能，是怎么个实现呢
 
-<cookie.png>
+<img src="https://github.com/ShireHong/Doraemon/blob/master/linux/network/pic/cookie.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 从上图我们可以知道Cookie是由***浏览器负责存储***，并不是操作系统负责，我们换个浏览器打开同样的网页，服务就认不出来了。
 
@@ -383,11 +397,13 @@ Cookie常见的应用一个是**身份识别**，一个是**广告追踪**，比
 
 > 之前介绍的都是一问一答的情景，但是在大部分的情况下都会存在多台服务器进行通信服务。其中比较常见的就是在请求方与应答方中间增加一个中间代理。
 
-<agent.png>
+<img src="https://github.com/ShireHong/Doraemon/blob/master/linux/network/pic/agent.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 代理作为中间位置，相对请求方为服务端，相当于后端服务端为请求方。代理常见的功能为***负载均衡***。在负载均衡中需要区分正向代理与反向代理，其中也就会涉及***调度算法***，比如轮询，一致性哈希等。
 
-<forward_and_reverse_agent.png>
+<img src="https://github.com/ShireHong/Doraemon/blob/master/linux/network/pic/forward_and_reverse_agent.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 
 ### HTTPS
@@ -396,7 +412,8 @@ Cookie常见的应用一个是**身份识别**，一个是**广告追踪**，比
 
 安全四要素
 
-<sercurity_elements.png>
+<img src="https://github.com/ShireHong/Doraemon/blob/master/linux/network/pic/sercurity_elements.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 #### 机密性
 
@@ -414,15 +431,18 @@ Cookie常见的应用一个是**身份识别**，一个是**广告追踪**，比
 
 > 君子一言驷马难追，说话算数，说过的话做过的事要有所保证
 
-<http_and_https.png>
+<img src="https://github.com/ShireHong/Doraemon/blob/master/linux/network/pic/http_and_https.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 从上图我们知道HTTPS无非是在传输层和应用层中间加了一层TLS，正是TLS紧跟当代密码学的步伐，尽全力的保障用户的安全。老规矩，我们用wireshark看看长什么样子。
 
-< TLS.png>
+<img src="https://github.com/ShireHong/Doraemon/blob/master/linux/network/pic/TLS.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 可以看出在交互的过程中多了不少新东西，了解TLS,TLS由SSL握手协议，SSL修改密码规范协议，SSL警报协议，SSL记录协议组成。
 
-< TLS_components.png>
+<img src="https://github.com/ShireHong/Doraemon/blob/master/linux/network/pic/TLS_components.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 #### SSL握手协议
 
@@ -446,19 +466,22 @@ Cookie常见的应用一个是**身份识别**，一个是**广告追踪**，比
 
 > 对称加密，顾名思义，加密方与解密方使用同一钥匙(秘钥)。具体一些就是，发送方通过使用相应的加密算法和秘钥，对将要发送的信息进行加密；对于接收方而言，使用解密算法和相同的秘钥解锁信息，从而有能力阅读信息。
 
-<symmetric_encryption.png>
+<img src="https://github.com/ShireHong/Doraemon/blob/master/linux/network/pic/symmetric_encryption.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 - 非对称加密
 
 > 在对称加密中，发送方与接收方使用相同的秘钥。那么在非对称加密中则是发送方与接收方使用的不同的秘钥。其主要解决的问题是防止在秘钥协商的过程中发生泄漏。比如在对称加密中，小蓝将需要发送的消息加密，然后告诉你密码是123balala,ok,对于其他人而言，很容易就能劫持到密码是123balala。那么在非对称的情况下，小蓝告诉所有人密码是123balala,对于中间人而言，拿到也没用，因为没有私钥。所以，非对称密钥其实主要解决了密钥分发的难题。如下图
 
-<asymmetric_encryption.png>
+<img src="https://github.com/ShireHong/Doraemon/blob/master/linux/network/pic/asymmetric_encryption.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 - 混合加密
 
 > 非对称加密算法，大多数是从数学问题演变而来，运算速度较慢。混合加密所谓取长补短。通信过程中使用RSA等解决密钥交换问题，然后使用随机数产生的在对称算法中的会话密钥，最后使用加密。对方使用私钥解密得到的密文取出会话秘钥，这样就实现了密钥交换。
 
-<mixed_encryption.png>
+<img src="https://github.com/ShireHong/Doraemon/blob/master/linux/network/pic/mixed_encryption.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 通过混淆加密等方式完成了机密性任务，作为Hack只需要伪造发布公钥或者作为之间人窃听密文。但是我们知道安全是四要素，还需要保证数据的完整性，身份认证等。
 
@@ -468,15 +491,18 @@ Cookie常见的应用一个是**身份识别**，一个是**广告追踪**，比
 
 假设小A转账5000给小C，小A加上SHA-2摘要。网站计算摘要并对比，如果一致则完整可信。
 
-<abstract.png>
+<img src="https://github.com/ShireHong/Doraemon/blob/master/linux/network/pic/abstract.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 此时小B想修改小A给的money，这个时候网站计算摘要就会发现不一样，不可信
 
-<abstract_no.png>
+<img src="https://github.com/ShireHong/Doraemon/blob/master/linux/network/pic/abstract_no.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 HTTPS请求建立连接过程
 
-<HTTPS_hand_shake.png>
+<img src="https://github.com/ShireHong/Doraemon/blob/master/linux/network/pic/HTTPS_hand_shake.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 `注意：`
 
@@ -489,11 +515,13 @@ HTTPS请求建立连接过程
 
 根据wireshak结果，对TLS进一步剖析。TCP三次握手建立连接，作为礼貌，Client先打招呼"Client Hello"。里面包含了Client的**版本号、所支持的密码套件和随机数**，如下图所示
 
-<client_hello.png>
+<img src="https://github.com/ShireHong/Doraemon/blob/master/linux/network/pic/client_hello.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 Server端表示尊重，回复"Server Hello",同时进行版本校对，给出随机数(Server Random)，从Client算法列表中选择一个密码套件，在这里选择的"TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"。
 
-<cipher_suite.png>
+<img src="https://github.com/ShireHong/Doraemon/blob/master/linux/network/pic/cipher_suite.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 这里的"TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"什么意思呢?
 
@@ -501,17 +529,20 @@ Server端表示尊重，回复"Server Hello",同时进行版本校对，给出�
 
 双方通过证书验证身份。因为本机服务器选用了ECDHE算法，为了实现密钥交换算法，它会发送证书后把椭圆曲线的公钥（Server Params）连带"Server Key Exchange"消息发送出去。
 
-<server_key_exchange.png>
+<img src="https://github.com/ShireHong/Doraemon/blob/master/linux/network/pic/server_key_exchange.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 意思是，刚才混合加密套件比较复杂，给你个算法参数，好好记住，别弄丢了。
 
-<server_hello_done.png>
+<img src="https://github.com/ShireHong/Doraemon/blob/master/linux/network/pic/server_hello_done.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 随后服务端回复"hello done"告知打招呼完毕
 
 打完招呼完毕后，客户端对证书进行核实。然后根据密码套件也生成椭圆曲线的公钥，用"Client Key Exchange"消息发给服务器
 
-<client_key_exchange.png>
+<img src="https://github.com/ShireHong/Doraemon/blob/master/linux/network/pic/client_key_exchange.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 此时客户端和服务端都有了密钥交换的两个参数(Client Params、ServerParams），然后通过 ECDHE 算法算出了一个新的值，叫“Pre-Master”
 
@@ -552,7 +583,8 @@ com 顶级域名服务器可以返回 apple.com 域名服务器的 IP 地址；
 
 > 这里说的识别，通过代码层面(libpcap封装)实现HTTP的识别，也能进一步体现TCP/IP协议栈的分层特性。先看回忆一下IP头部格式。
 
-<IP_header.png>
+<img src="https://github.com/ShireHong/Doraemon/blob/master/linux/network/pic/IP_header.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 注意头部中的协议字段，如果此字段值为0x0600则为TCP分组。当知道了是TCP分组后，是不是可以通过TCP头部中端口(80)就可以判断为HTTP呢，不能的，很多情况都会**使用动态端口的方式**进行部署。此时可以通过HTTP中的关键字进行判断。如果为HTTP，再通过头部字段中的"Content-type"，charset等确认文本信息，编码方式，最后采用解码算法进行还原。
 
@@ -565,16 +597,19 @@ com 顶级域名服务器可以返回 apple.com 域名服务器的 IP 地址；
 
 > 使用python的dpkt库(pip install dpkt即可)，dpkt库方便对每一层协议进行拆解，同时也能进行流的拆分以及特征的提取。下面举一个通过无头浏览的方式自动化采集流量(ps如果需要较大规模的流量采集则可以考虑使用docker集群的方式)
 
-<read_pcap.png>
+<img src="https://github.com/ShireHong/Doraemon/blob/master/linux/network/pic/read_pcap.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 - 根据所提特征生成npz(实际上是numpy提供的数组存储方式)
 - 使用开源skearn库进行模型训练并识别预测，此处假设使用SVM(仅使用默认参数)
 
-<svm.png>
+<img src="https://github.com/ShireHong/Doraemon/blob/master/linux/network/pic/svm.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 - 识别结果(参数进行适度调整定会更好的效果)
 
-<result.png>
+<img src="https://github.com/ShireHong/Doraemon/blob/master/linux/network/pic/result.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 ### HTTP面试题
 
