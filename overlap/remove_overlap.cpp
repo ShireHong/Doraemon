@@ -21,7 +21,7 @@ void sort_sec(sec_t * ss,int len)
     int i,j;
     for(i=0;i<len;i++)
     {
-        for(j=0;j<len-j;j++)
+        for(j=0;j<len-i-1;j++)
         {
             sec_t tmp;
             if(ss[j].b > ss[j+1].b)
