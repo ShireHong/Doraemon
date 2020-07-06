@@ -40,6 +40,15 @@
     - [ ] [归并排序](https://github.com/ShireHong/algorithm-note/tree/master/sort)
 - [ ] [动态规划](https://github.com/ShireHong/algorithm-note/tree/master/dp) 
 - [ ] [贪心算法](https://github.com/ShireHong/algorithm-note/tree/master/greedy) 
+- [ ] **滑动窗口**:
+    - [ ] [查找等长但排序不同的字符串](https://github.com/ShireHong/Doraemon/blob/master/slide_window/find_same_string.c)
+    - [ ] [带有不同字符的最长子字符串](https://github.com/ShireHong/Doraemon/blob/master/slide_window/k_different_string.c)
+- [ ] **双指针**:
+    - [ ] [排序数组的平方和排序](https://github.com/ShireHong/Doraemon/blob/master/two_pointers/square_sort_vector.c)
+    - [ ] [和为零的三元组](https://github.com/ShireHong/Doraemon/blob/master/two_pointers/three_num_zero.c)
+    - [ ] [包含回退（backspace）的字符串](https://github.com/ShireHong/Doraemon/blob/master/two_pointers/backspace_string.c)
+- [ ] **区间交叉**:
+    - [ ] [找到不相交的区间](https://github.com/ShireHong/Doraemon/blob/master/overlap/remove_overlap.cpp)
 
 ## Linux
  > Linux有几大部分组成，进程管理、内存管理、文件系统以及网络管理
@@ -56,7 +65,7 @@
     - [ ] [练习](https://github.com/ShireHong/OpenGL/tree/master/OpenGL)
     - [ ] [BreakOut](https://github.com/ShireHong/OpenGL/tree/master/my_game/breakout) 基于OpenGL完成的一个游戏，主要是基于c++搭建一个框                     架，包含渲染，物理碰撞，声音（Mingw的声音库有问题，在研究），游戏逻辑。实现了一个2D引擎，基于这个引擎可以制作所有的2D游                     戏。
     - [ ] [AirCraft](https://github.com/ShireHong/OpenGL/tree/master/my_game/aircraft)根据上面的引擎开发的游戏，主要是练习多目标物理碰                       撞，使用C++的STL容器，但是算法有待改进。
- 
+ overlap/a.exe
  ## 数据结构
  >> 链表
  >>> 单链表
