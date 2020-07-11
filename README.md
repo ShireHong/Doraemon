@@ -80,6 +80,7 @@
  >>> 二叉树
  >>>> - [ ] [树的层遍历](https://github.com/ShireHong/algorithm-note/blob/master/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/tree_traversal.c)
  >>>> - [ ] [树的路径之和](https://github.com/ShireHong/Doraemon/blob/master/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/tree_trace_sum.c)
+ >>>> - [ ] [树的深度](https://github.com/ShireHong/Doraemon/blob/master/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/tree_depth.c)
 
  - [ ] [环形队列](https://github.com/ShireHong/algorithm-note/tree/master/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%8E%AF%E5%BD%A2%E9%98%9F%E5%88%97)
 
