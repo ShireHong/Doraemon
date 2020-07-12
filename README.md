@@ -27,6 +27,7 @@
     - [ ] [大数运算](https://github.com/ShireHong/Doraemon/blob/master/c/bigint.c)
     - [ ] [二分查找](https://github.com/ShireHong/Doraemon/blob/master/c/binarysearch.c)
     - [ ] [查找丑数](https://github.com/ShireHong/Doraemon/blob/master/c/find_ugly_number.c)
+    - [ ] [三天打鱼两天晒网](https://github.com/ShireHong/Doraemon/blob/master/c/count_fish_date.c)
     
 - [ ] **字符串问题汇总**
     - [ ] [双指针逆序](https://github.com/ShireHong/algorithm-note/blob/master/string/str_reverse.c)
