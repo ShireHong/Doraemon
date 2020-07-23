@@ -71,7 +71,7 @@ char lowtoupper(char c)
 void find_subsets(int len,int t)
 {
 	int i = t;
-	if(i>len)
+	if(i>=len)
 	{
 		for(i=0;i<len;i++)
 		{
@@ -79,18 +79,13 @@ void find_subsets(int len,int t)
 		}
 		printf("\n");
 		return;
-	}
-
-	//i++;
-	while(i<len && !isletter(*(ss+i)))
-	{
-		st[i] = *(ss+i);
-		i++;
-	}
-	/*去掉这个判断，值会显示两遍*/	
-	if(i<len)
-	{
-
+	}else{
+	
+		while(i<len && !isletter(*(ss+i)))
+		{
+			st[i] = *(ss+i);
+			i++;
+		}
 		//printf("hh = %d %c",i,st[i]);
 		st[i] = *(ss+i);
 
@@ -100,10 +95,7 @@ void find_subsets(int len,int t)
 		st[i] =  lowtoupper(*(ss+i));
 
 		find_subsets(len, i+1);
-	
 	}
-	else
-	 find_subsets(len, i+1);
 	
 }
 

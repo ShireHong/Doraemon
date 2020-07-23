@@ -16,10 +16,14 @@
 
 */
 
+/*以下解法比网上的解法更容易理解，而且特别简单，不需要把增加的值减回去*/
+
 
 #define TH 34
-
+//#define TH 152
 int sp[]={5,8,21,10};
+
+//int sp[]={90,80,40,30,20,12,10};
 
 int st[100] = {0};
 int best[100]= {0};
@@ -28,14 +32,18 @@ void load(int len,int t)
 {
 	int i,sum = 0;
 	i=t;
-	if(i > len)
+	if(i >= len)
 	{
 		for(i=0;i<len;i++)
 		{
+			//printf("%d ",st[i] );
 			sum += st[i];
 		}
-		if(sum > sum1 && sum <= TH)
+		//printf("\n");
+		//printf("sum = %d\n",sum);
+		if(sum > sum1 && sum <= TH )
 		{
+			sum1 = sum;
 			for(i=0;i<len;i++)
 			{
 				best[i] = st[i];
@@ -44,18 +52,13 @@ void load(int len,int t)
 		
 		
 		return ;		
-	}
-	/*当i值=>len时，通过递归出去计算，不然的话，会重复计算*/
-	if(i<len)
-	{	
-		/*非常简单的递归思想，要么转载，要么不转载，计算所有情况*/
+	}else{
 		st[i] = 0;
 		load(len,i+1);
 		st[i]=sp[i];
 		load(len,i+1);
 	}
-	else
-		load(len,i+1);
+	
 }
 
 
@@ -68,7 +71,7 @@ int main()
 
 	for(i=0;i<len;i++)
 	{
-		printf("%d ",best[i] );;
+		printf("%d ",best[i] );
 	}
 	printf("\n");
 }
