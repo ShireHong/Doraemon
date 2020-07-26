@@ -53,6 +53,11 @@
     - [ ] [包含回退（backspace）的字符串](https://github.com/ShireHong/Doraemon/blob/master/two_pointers/backspace_string.c)
 - [ ] **区间交叉**:
     - [ ] [找到不相交的区间](https://github.com/ShireHong/Doraemon/blob/master/overlap/remove_overlap.cpp)
+- [ ] **回溯法**:
+    - [ ] [字母大小写全排列](https://github.com/ShireHong/Doraemon/blob/master/subsets/case_letters_subsets.c)
+    - [ ] [装载问题](https://github.com/ShireHong/Doraemon/blob/master/subsets/load.c)
+    - [ ] [旅行商问题](https://github.com/ShireHong/Doraemon/blob/master/subsets/travel_seller.c)
+    - [ ] [八皇后问题](https://github.com/ShireHong/Doraemon/blob/master/subsets/eight_queens.c)
 
 ## Linux
  > Linux有几大部分组成，进程管理、内存管理、文件系统以及网络管理
