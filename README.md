@@ -97,7 +97,7 @@
 ## 学习网站
 - [ ] [C/C++资源](https://ezlippi.com/blog/2014/12/c-open-project.html),这个BLOG有很多开源的C/C++的资源，内容丰富，囊括很多方面的内容
 - [ ] [C++学习](https://github.com/Light-City/CPlusPlusThings) , 很全面的C++学习资源，对入门学习有很大的帮助
-- [ ] [C语言开源代码学习](https://github.com/ShireHong/Doraemon/tree/master/c/open%20source%20c)
+- [ ] [C语言开源代码学习](https://github.com/ShireHong/Doraemon/blob/master/c/open%20source%20c/open%20source.md)
 
 
 
