@@ -54,7 +54,8 @@ struct sockaddr{
 
 从应用程序开发人员的观点看，这些通用的套接口地址结构的唯一用途是给指向特定于协议的地址结构的指针转类型
 
-
+<img src="https://github.com/ShireHong/Doraemon/blob/master/UNP/source/%E5%9C%B0%E5%9D%80%E7%BB%93%E6%9E%84.png"  
+    alt="图片加载失败时，显示这段字"/>
 
 
 
