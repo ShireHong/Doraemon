@@ -57,5 +57,21 @@ struct sockaddr{
 <img src="https://github.com/ShireHong/Doraemon/blob/master/UNP/source/%E5%9C%B0%E5%9D%80%E7%BB%93%E6%9E%84.png"  
     alt="图片加载失败时，显示这段字"/>
 
+### inet_pton 和 inet_ntop
+
+p:presentation 地址表达式 ACSII 串
+n:numeric 二进制值
+
+```
+int inet_pton(int family, const char* strptr, void* addrptr);
+1:成功
+0：无效输入表达式
+-1：出错
+
+const char* inet_ntop(int family, const void*addrptr, char* strptr, size_t len);
+指向结果指针：成功
+NULL：出错
+```
+
 
 
