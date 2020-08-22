@@ -51,6 +51,7 @@
     - [ ] [排序数组的平方和排序](https://github.com/ShireHong/Doraemon/blob/master/two_pointers/square_sort_vector.c)
     - [ ] [和为零的三元组](https://github.com/ShireHong/Doraemon/blob/master/two_pointers/three_num_zero.c)
     - [ ] [包含回退（backspace）的字符串](https://github.com/ShireHong/Doraemon/blob/master/two_pointers/backspace_string.c)
+    - [ ] [求最多盛水容器](https://github.com/ShireHong/Doraemon/blob/master/two_pointers/pool_max.c)
 - [ ] **区间交叉**:
     - [ ] [找到不相交的区间](https://github.com/ShireHong/Doraemon/blob/master/overlap/remove_overlap.cpp)
 - [ ] **回溯法**:
