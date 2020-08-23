@@ -75,3 +75,5 @@ NULL：出错
 ### execve
 **execve**才是内核中的的系统调用，其他五个函数都是调用execve的库函数
 
+<img src="https://github.com/ShireHong/Doraemon/blob/master/UNP/source/execve.png"  
+    alt="图片加载失败时，显示这段字"/>
