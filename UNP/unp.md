@@ -72,6 +72,6 @@ const char* inet_ntop(int family, const void*addrptr, char* strptr, size_t len);
 指向结果指针：成功
 NULL：出错
 ```
-
-
+### execve
+**execve**才是内核中的的系统调用，其他五个函数都是调用execve的库函数
 
