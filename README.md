@@ -48,6 +48,7 @@
 - [ ] **滑动窗口**:
     - [ ] [查找等长但排序不同的字符串](https://github.com/ShireHong/Doraemon/blob/master/slide_window/find_same_string.c)
     - [ ] [带有不同字符的最长子字符串](https://github.com/ShireHong/Doraemon/blob/master/slide_window/k_different_string.c)
+    - [ ] [最大公共子集](https://github.com/ShireHong/Doraemon/blob/master/slide_window/max_same_subsets.c)
 - [ ] **双指针**:
     - [ ] [排序数组的平方和排序](https://github.com/ShireHong/Doraemon/blob/master/two_pointers/square_sort_vector.c)
     - [ ] [和为零的三元组](https://github.com/ShireHong/Doraemon/blob/master/two_pointers/three_num_zero.c)
