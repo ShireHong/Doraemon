@@ -77,3 +77,20 @@ NULL：出错
 
 <img src="https://github.com/ShireHong/Doraemon/blob/master/UNP/source/execve.png"  
     alt="图片加载失败时，显示这段字"/>
+### 处理被中断的系统调用
+处理被中断的accept
+慢系统调用
+```
+for(;;)
+{
+   clilen = sizeof(cliaddr);
+   if((connfd = accept(listenfd,(SA *)&cliaddr,&clilen))<0)
+   {
+     if(errno == EINTR)
+        continue;
+     else
+        err_sys("accept error");
+   }
+}
+```
+处理accept、read、write、select和open这样的函数可以使用**重启**被中断的系统调用，**connect**被信号中断不能使用这样的重启，必须调用select等待连接完成。
