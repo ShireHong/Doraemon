@@ -99,3 +99,7 @@ for(;;)
 - 1.可靠的关闭tcp的连接。比如网络拥塞，如果主动关闭方最后一个ACK没有被接收方收到的话，在此时因为持续了两个MSL而尚未关闭的TIME_WAIT就会把这些尾巴问题给处理掉，比如说，重新启动TIME_WAIT,然后重新发送给一次ACK。
 - 2.防止由于没有持续TIME_WAIT的时间导致新的TCP连接建立起来，延迟的FIN重传包会干扰新的连接
 
+### I/O复用
+
+<img src="https://github.com/ShireHong/Doraemon/blob/master/UNP/source/五个IO模型比较.png"  
+    alt="图片加载失败时，显示这段字"/>
