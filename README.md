@@ -43,11 +43,16 @@
 - [ ]  **排序**:
     - [ ] [快速排序](https://github.com/ShireHong/algorithm-note/tree/master/sort) 
     - [ ] [归并排序](https://github.com/ShireHong/algorithm-note/tree/master/sort)
-- [ ] [动态规划](https://github.com/ShireHong/algorithm-note/tree/master/dp) 
-- [ ] [贪心算法](https://github.com/ShireHong/algorithm-note/tree/master/greedy) 
+- [ ] **动态规划**
+    - [ ] [1-2-5数钱问题](https://github.com/ShireHong/Doraemon/blob/master/dp/dp_money.c) 
+    - [ ] [最多石子问题](https://github.com/ShireHong/Doraemon/blob/master/dp/dp.c)
+- [ ] **贪心算法]**
+    - [ ] [销售策略](https://github.com/ShireHong/Doraemon/blob/master/greedy/greedy_sale_competition.cpp)
+    - [ ] [锯木板](https://github.com/ShireHong/Doraemon/blob/master/greedy/greedy_sawing_board.cpp)
 - [ ] **滑动窗口**:
     - [ ] [查找等长但排序不同的字符串](https://github.com/ShireHong/Doraemon/blob/master/slide_window/find_same_string.c)
     - [ ] [带有不同字符的最长子字符串](https://github.com/ShireHong/Doraemon/blob/master/slide_window/k_different_string.c)
+    - [ ] [最大公共子集](https://github.com/ShireHong/Doraemon/blob/master/slide_window/max_same_subsets.c)
 - [ ] **双指针**:
     - [ ] [排序数组的平方和排序](https://github.com/ShireHong/Doraemon/blob/master/two_pointers/square_sort_vector.c)
     - [ ] [和为零的三元组](https://github.com/ShireHong/Doraemon/blob/master/two_pointers/three_num_zero.c)
