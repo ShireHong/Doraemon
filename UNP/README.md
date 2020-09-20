@@ -110,8 +110,8 @@ for(;;)
  
 struct timeval
 {
-  long tv_sec;
-  long tv_usec;
+  long tv_sec;  秒
+  long tv_usec; 微秒
 }
  ```
  
