@@ -103,3 +103,18 @@ for(;;)
 
 <img src="https://github.com/ShireHong/Doraemon/blob/master/UNP/source/五个IO模型比较.png"  
     alt="图片加载失败时，显示这段字"/>
+ 
+ - select 函数
+ ```
+ int select(int maxfdp, fd_set *rdset,fd_set *writeset, fd_set *exceptset, const struct timeval *timeout);
+ 
+struct timeval
+{
+  long tv_sec;
+  long tv_usec;
+}
+ ```
+ 
+
+
+
