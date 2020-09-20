@@ -115,9 +115,9 @@ struct timeval
 }
  ```
  关于select函数的超时时间
- 1，timeout 为NULL，阻塞等待直到有描述符准备好
- 2，等待固定时间，timeout设为设置的struct timeval的值
- 3，不等待，立即返回。timeval的值设为0
+ - 1，timeout 为NULL，阻塞等待直到有描述符准备好
+ - 2，等待固定时间，timeout设为设置的struct timeval的值
+ - 3，不等待，立即返回。timeval的值设为0
 
 
 
