@@ -13,9 +13,6 @@
 
 
 
-//#define SA struct sockaddr 
-
-
 
 
 static void str_echo(int fd)
@@ -46,7 +43,7 @@ void sig_handle(int signo)
 
 int main(int argc,char *argv[])
 {
-	int listenfd,connectfd,client[10],sockfd;
+	int listenfd,connectfd,client[FD_SETSIZE],sockfd;
 	struct sockaddr_in serv_addr,cli_addr;
 	int cli_len;
 	
@@ -82,8 +79,10 @@ int main(int argc,char *argv[])
 	FD_ZERO(&allset);
 	FD_SET(listenfd,&allset);
 
-	for(i=0;i<10;i++)
+	for(i=0;i<FD_SETSIZE;i++)
+	{
 		client[i] = -1;
+	}
 	int nready;	
 
 	for(;;)
@@ -95,20 +94,23 @@ int main(int argc,char *argv[])
 			cli_len = sizeof(cli_addr);
 			connectfd = accept(listenfd,(SA*)&cli_addr,&cli_len);
 			
-			for(i=0;i<10;i++)
+			for(i=0;i<FD_SETSIZE;i++)
 			{
-				if(client[i] == -1)
+				if(client[i] < 0)
 				{
 					client[i] = connectfd;
 					break;
 				}
 			}
 			
-			if(i == 10)
+			if(i == FD_SETSIZE)
+			{
 				printf("error:client is full!\n");
-			
+				return -1;
+			}
 			FD_SET(connectfd,&allset);
-			
+			if(connectfd > maxfd)
+				maxfd = connectfd+1;
 			if(i > maxi)
 				maxi = i;
 			if(--nready <= 0) //nready 为1,或比1小，1是刚才读出来，说明后续没有值了
