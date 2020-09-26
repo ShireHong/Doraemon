@@ -119,5 +119,16 @@ struct timeval
  - 2，等待固定时间，timeout设为设置的struct timeval的值
  - 3，不等待，立即返回。timeval的值设为0
 
+- poll
+```
+int poll(struct pollfd *fdarry, unsigned long nfds, int timeout )
 
+struct pollfd {
+    int fd;
+    short events;
+    short revents;
+}
+```
+<img src="https://github.com/ShireHong/Doraemon/blob/master/UNP/source/poll_events.png"  
+    alt="图片加载失败时，显示这段字"/>
 
