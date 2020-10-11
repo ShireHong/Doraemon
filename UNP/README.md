@@ -137,3 +137,21 @@ struct pollfd {
 - **TCP**是数据据流的格式，可以一次性收完缓存区内的数据，也可以设置接收大小分几次接收完。
 - 原因还是基于两种传输协议的特性，TCP是面向连接的，是可靠的，保证接收数据来自同一个地址，但UDP是不可靠的，接受的数据可能来自不同的地址，这样接受的数据就会乱套。
 
+### gethostbyname
+```
+include<netdb.h>
+
+struct hostent *gethostbyname(const char* hostname);
+
+返回：非空指针--成功，空指针--出错，同时设置h_errno
+
+struct hostent{
+  char * h_name;
+}
+
+
+```
+
+
+
+
