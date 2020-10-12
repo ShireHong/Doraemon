@@ -138,6 +138,8 @@ struct pollfd {
 - 原因还是基于两种传输协议的特性，TCP是面向连接的，是可靠的，保证接收数据来自同一个地址，但UDP是不可靠的，接受的数据可能来自不同的地址，这样接受的数据就会乱套。
 
 ### gethostbyname
+
+根据域名获取IP地址
 ```
 include<netdb.h>
 
@@ -156,6 +158,15 @@ struct hostent{
 
 ```
 
+### gethostbyaddr 
 
+根据IP地址找到主机名 h_name;
 
+```
+include<netdb.h>
+
+struct hostent *gethostbyaddr(const char* addr,size_t len,int family);
+
+返回：非空指针--成功，空指针--出错，同时设置h_errno
+```
 
