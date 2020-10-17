@@ -109,6 +109,7 @@ int main(int argc,char *argv[])
 				return -1;
 			}
 			FD_SET(connectfd,&allset);
+
 			if(connectfd > maxfd)
 				maxfd = connectfd+1;
 			if(i > maxi)
