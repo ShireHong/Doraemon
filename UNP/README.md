@@ -170,3 +170,10 @@ struct hostent *gethostbyaddr(const char* addr,size_t len,int family);
 返回：非空指针--成功，空指针--出错，同时设置h_errno
 ```
 
+### IPV4和IPV6互操作
+- 如果IPv6的TCP客户调用connect时，或IPv6的UDP客户调用sendto时指定的是一个IPv4映射的IPv6的地址，内核会检测到这个映射地址，并发送一个IPv4的数据报，而不是一个IPv6的数据报
+- IPv4客户不能在调用connect或sendto时指定一个IPv6地址，这是因为在IPv4sockaddr_in结构李的4字节的in_addr结构中，放不下一个16字节的IPv6的地址。
+
+<img src="https://github.com/ShireHong/Doraemon/blob/master/UNP/source/IPv4和IPv6的互操.png"  
+    alt="图片加载失败时，显示这段字"/>
+
