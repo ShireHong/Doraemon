@@ -177,3 +177,27 @@ struct hostent *gethostbyaddr(const char* addr,size_t len,int family);
 <img src="https://github.com/ShireHong/Doraemon/blob/master/UNP/source/IPv4和IPv6的互操.png"  
     alt="图片加载失败时，显示这段字"/>
 
+
+###  getaddrinfo
+```
+include<netdb.h>
+
+int getaddrinfo(const char* hostname,const char *serice,const struct addrinfo *hints,struct addrinfo ** result);
+
+返回：0--成功，！0--出错
+
+struct addrinfo {
+int        　　　　    　　ai_flags;//指示在getaddrinfo函数中使用的选项的标志。
+int        　　　　   　　 ai_family;
+int        　　　　    　　ai_socktype;
+int        　　　　　 　　ai_protocol;
+size_t       　　　　 　　ai_addrlen;
+char       　　　　 　　*ai_canonname;
+struct sockaddr    　　*ai_addr;
+struct addrinfo     　　*ai_next;//指向链表中下一个结构的指针。此参数在链接列表的最后一个addrinfo结构中设置为NULL。
+} ;
+
+```
+
+
+
