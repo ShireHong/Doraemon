@@ -34,6 +34,7 @@
     - [ ] [双指针逆序](https://github.com/ShireHong/algorithm-note/blob/master/string/str_reverse.c)
 - [ ] **基础面试题**
     - [ ] [嵌入式C](https://github.com/ShireHong/Doraemon/blob/master/c/embedded_c/embedded_c.md)
+    - [ ] [宏的理解](https://github.com/ShireHong/Doraemon/blob/master/c/embedded_c/macro.md)
 
 ## C++
 使用栈的功能实现了一个计算器，主要考察栈的使用机理
