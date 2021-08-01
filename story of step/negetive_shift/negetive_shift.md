@@ -3,6 +3,7 @@
 最近再做项目时发现，读取PSU的值需要通过移位，为此，又去了解了一下负数的移位的问题。
 <img src="https://github.com/ShireHong/Doraemon/blob/master/story%20of%20step/negetive_shift/psu.png"  
     alt="图片加载失败时，显示这段字"/>
+
 负数的移位在左移和右移的补数方面时不同的，数的右移需要截断，所以不能等价于除2的n次幂。负数转2进制需要+1，2进制转负数也要+1.
 
 
