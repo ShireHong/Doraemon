@@ -18,8 +18,7 @@
 #define COMPLEMENT(val, bit_num)            ((~(val) + 1) & BIT_MASK(bit_num))
 #define COMPLEMENT_BYTE(val, bit_num)       ((((val) & ((uint8)1 << BIT_POS(bit_num))) == 0)?(int8)(val):(int8)(-COMPLEMENT(val, bit_num)))
 ```
-BIT_POS     			这个宏是为了计算移位时候用到的
-BIT_MASK    			这个宏是用来做与运算，pow_2为2的n次幂运算，这个运算结果表示bit_num-1个bit都是1
-
-COMPLEMENT  			这个宏就是取val值的补码
-COMPLEMENT_BYTE			先判断这个值的最高位bit_num的bit是否为1，若为0则是按正数获取原值，若为1，则val是负数，通过对val反补码获得一个正值，补上负号。
+**BIT_POS**	这个宏是为了计算移位时候用到的
+**BIT_MASK**这个宏是用来做与运算，pow_2为2的n次幂运算，这个运算结果表示bit_num-1个bit都是1
+**COMPLEMENT** 这个宏就是取val值的补码
+**COMPLEMENT_BYTE**先判断这个值的最高位bit_num的bit是否为1，若为0则是按正数获取原值，若为1，则val是负数，通过对val反补码获得一个正值，补上负号。
