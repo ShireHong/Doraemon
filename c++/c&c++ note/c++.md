@@ -26,11 +26,11 @@ c_str()函数返回一个指向正规C字符串的指针常量, 内容与本stri
 这个const指明了这个函数不会修改该类的任何成员数据的值，称为常量成员函数。
 
 ## 智能指针之unique_ptr
-- unique_ptr<T> u1     空unique_ptr,可以指向类型为T的对象，u1会使用delete来释放他的指针。
-- unique_ptr<T,D> u2   u2会使用一个类型为D的对象来释放它的指针。
-- unique_ptr<T,D> u(d) 空unique_ptr,指向类型为T的对象，用类型为D的对象代替delete
-- u = nullptr          释放u指向的对象，将u置为空
-- u.release()          u放弃对指针的控制权，返回指针，并将u置为空
-- u.reset()            释放u指向的对象
-- u.reset(q)           如果提供了内置指针q，令u指向这个对象
-- u.reset(nullptr)     否则u置为空
+- unique_ptr<T> u1 &emsp; &emsp; 空unique_ptr,可以指向类型为T的对象，u1会使用delete来释放他的指针。
+- unique_ptr<T,D> u2 &emsp; &emsp; u2会使用一个类型为D的对象来释放它的指针。
+- unique_ptr<T,D> u(d) &emsp; &emsp; 空unique_ptr,指向类型为T的对象，用类型为D的对象代替delete
+- u = nullptr &emsp; &emsp; 释放u指向的对象，将u置为空
+- u.release() &emsp; &emsp; u放弃对指针的控制权，返回指针，并将u置为空
+- u.reset() &emsp; &emsp; 释放u指向的对象
+- u.reset(q) &emsp; &emsp; 如果提供了内置指针q，令u指向这个对象
+- u.reset(nullptr) &emsp; &emsp; 否则u置为空
